@@ -1,0 +1,163 @@
+/* Resetando o estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Definindo o estilo do body */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradiente de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+  }
+  
+  /* Container principal */
+  .todo-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    transition: all 0.3s ease;
+  }
+  
+  .todo-container:hover {
+    transform: scale(1.05); /* Efeito de zoom quando passa o mouse sobre o container */
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Campo de input */
+  #taskInput {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  #taskInput:focus {
+    border-color: #2575fc;
+    outline: none;
+  }
+  
+  /* Botão de adicionar */
+  button {
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #6a11cb;
+  }
+  
+  /* Estilo para a lista de tarefas */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  /* Estilo das tarefas */
+  li {
+    background-color: #f8f8f8;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  li:hover {
+    transform: translateY(-5px);
+    background-color: #e2e2e2;
+  }
+  
+  /* Texto das tarefas */
+  li span {
+    font-size: 18px;
+    color: #333;
+    flex-grow: 1;
+  }
+  
+  /* Tarefa completa (riscada) */
+  li.completed span {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  /* Botões dentro da tarefa */
+  button {
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+  }
+  
+  /* Estilo para o botão de Play/Pause */
+  .play-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .play-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .pause-btn {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .pause-btn:hover {
+    background-color: #e68900;
+  }
+  
+  /* Estilo do botão de excluir */
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e32f2f;
+  }
+  
